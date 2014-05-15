@@ -35,8 +35,7 @@ sudo apt-get -q -y install mysql-server
 # bin address: On a computer having multiple network interfaces, this
 # option can be used to select which interface is employed
 # when connecting to the MySQL server.
-sudo sed -i "s/^bind\-address.*/bind-address = ${MYSQL_HOST}/g" \
-	/etc/mysql/my.cnf
+sudo sed -i "s/^bind\-address.*/bind-address = ${MYSQL_HOST}/g" /etc/mysql/my.cnf
 
 sudo service mysql restart
 mysqladmin -u root password ${MYSQL_ROOT_PASS}
